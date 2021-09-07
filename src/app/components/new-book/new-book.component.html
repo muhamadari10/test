@@ -1,0 +1,23 @@
+<div class="new-book">
+    <span class="title-box">New Book</span>
+    <form [formGroup]="form" (ngSubmit)="submitForm()" class="input-new">
+        <div class="group-input">
+            <div class="title">Name</div>
+            <div class="option">
+                <input type="text" formControlName="name">
+            </div>
+        </div>
+        <div class="group-input">
+            <div class="title">Year</div>
+            <div class="option">
+                <input type="text" formControlName="years">
+            </div>
+        </div>
+        <div class="group-input">
+            <div class="title"></div>
+            <div class="option">
+                <button class="submit">submit</button>
+            </div>
+        </div>
+    </form>
+</div>

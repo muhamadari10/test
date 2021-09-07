@@ -1,0 +1,44 @@
+<div *ngIf="bookList.length > 0" class="wrap-review">
+    <div class="review-book">
+        <span class="title-box">{{bookList[idItem].name}} Review</span>
+        <div class="input-new">
+            <ng-container *ngFor="let item of bookListReview; let i = index">
+                <div *ngIf="item.id == idItem" class="item-review">
+                    <div>{{ item.email }}</div>
+                    <div>{{ item.note }}</div>
+                    <div class="star">
+                        <div *ngFor="let stars of item.starView; let i = index">
+                            <img *ngIf="stars == 'active'" class="ico-star" src="../../../assets/icons/star.png" alt="" srcset="">
+                            <img *ngIf="stars == 'inactive'" class="ico-star" src="../../../assets/icons/star-empty.png" alt="" srcset="">
+                        </div>
+                    </div>
+                </div>
+            </ng-container>
+        </div>
+    </div>
+    <div class="review-book">
+        <span class="title-box">New Review</span>
+        <form [formGroup]="form" (ngSubmit)="submitForm()" class="input-new">
+            <div class="group-input">
+                <div class="option">
+                    <input type="text" placeholder="Email" formControlName="email">
+                </div>
+            </div>
+            <div class="group-input">
+                <div class="option">
+                    <input type="text" placeholder="Note" formControlName="note">
+                </div>
+            </div>
+            <div class="group-input">
+                <div class="option">
+                    <input type="number" placeholder="Star" formControlName="star">
+                </div>
+            </div>
+            <div class="group-input">
+                <div class="option">
+                    <button class="submit">submit</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

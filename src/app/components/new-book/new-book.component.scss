@@ -1,0 +1,25 @@
+.new-book{
+    margin: 30px;
+    border: 1px solid #777;
+    width: 40%;
+    min-width: 200px;
+    position: relative;
+    padding: 30px 15px;
+    .title-box{
+        position: absolute;
+        top: -10px;
+        background: #fff;
+        border: 1px solid #777;
+        padding: 2.5px 5px;
+        left: 10px;
+    }
+    .input-new{
+        .group-input{
+            display: flex;
+            padding-bottom: 10px;
+            .title{
+                width: 50px;
+            }
+        }
+    }
+}

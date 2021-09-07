@@ -1,0 +1,44 @@
+.wrap-review{
+    display: flex;
+}
+.review-book{
+    margin: 30px;
+    border: 1px solid #777;
+    width: 40%;
+    min-width: 200px;
+    position: relative;
+    padding: 30px 15px;
+    &:first-child{
+        margin-right: 0;
+    }
+    &:last-child{
+        margin-left: 0;
+    }
+    .title-box{
+        position: absolute;
+        top: -10px;
+        background: #fff;
+        border: 1px solid #777;
+        padding: 2.5px 5px;
+        left: 10px;
+    }
+    .input-new{
+        .group-input{
+            display: flex;
+            padding-bottom: 10px;
+            .title{
+                width: 50px;
+            }
+        }
+    }
+    .item-review:not(:last-child){
+        margin-bottom: 10px;
+        .email{ font-weight: 12px; color:#000; }
+        .note{ color: #666; }
+    }
+    .star{display: flex;}
+    .ico-star{
+        width: 20px;
+        height: 20px;
+    }
+}

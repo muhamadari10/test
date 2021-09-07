@@ -1,0 +1,47 @@
+.list-book{
+    margin: 30px;
+    border: 1px solid #777;
+    min-width: 200px;
+    position: relative;
+    padding: 30px 15px;
+    .title-box{
+        position: absolute;
+        top: -10px;
+        background: #fff;
+        border: 1px solid #777;
+        padding: 2.5px 5px;
+        left: 10px;
+    }
+    .list{
+        display: flex;
+    }
+    .item{
+        border: 2px solid #999;
+        width: 100px;
+        &.active{
+            border-color: #222;
+        }
+        &:not(:last-child){
+            margin-right: 15px;
+        }
+        .img{
+            height: 100px;
+            width: 100px;
+            justify-content: center;
+            text-align: center;
+            color: center;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            font-weight: bold;
+            color: #666;
+            border-bottom: 2px solid #666;
+        }
+        .year{
+            background: #666;
+            color: #fff;
+            text-align: center;
+            font-weight: bold;
+        }
+    }
+}

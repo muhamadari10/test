@@ -1,0 +1,11 @@
+<div *ngIf="bookList.length > 0" class="list-book">
+    <span class="title-box">List Book</span>
+    <div class="list">
+        <ng-container *ngFor="let item of bookList; let i = index">
+            <div class="item" [ngClass]="{'active': keyItem === i}" (click)="rate(i)">
+                <div class="img">{{item.name}}</div>
+                <div class="year">{{item.year}}</div>
+            </div>
+        </ng-container>
+    </div>
+</div>
